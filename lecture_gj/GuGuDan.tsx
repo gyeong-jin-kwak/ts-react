@@ -41,6 +41,7 @@ const GuGuDan = () => {
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />
+                <div>{result}</div>
             </form>
         </>
     )

@@ -4,12 +4,9 @@
 
 * npm init
 * npm i typescript
-* npm i react react-dom 
-: web 환경에서는 react-dom을 설치하고 app 환경에서는 react-native를 설치한다.
-* npm i webpack webpack-cli -D 
-: 최신 문법과 jsx 문법을 옛날 문법으로 바꿔주는 역할 / react 만 사용할 때에는 babel을 더 많이 사용, typescript는 자체적으로 es3(ie9)까지 자체적으로 지원이 된다. babel은 따로 필요하지 않지만 typescript와 babel을 같이 사용하는 경우도 있다. 
-* npm i awesome-typescript-loader -D
-: webpack과 typescript를 연결해주는 역할로는 유명한 두가지 ts-loader 와 awesome-typescript-loader가 있다. atl(awesome-typescritp-loader)은 ts-loader 보다 빠르며 bable을 지원한다. 후에 babel을 사용할 것을 염두해서 atl을 사용함
+* npm i react react-dom : web 환경에서는 react-dom을 설치하고 app 환경에서는 react-native를 설치한다.
+* npm i webpack webpack-cli -D : 최신 문법과 jsx 문법을 옛날 문법으로 바꿔주는 역할 / react 만 사용할 때에는 babel을 더 많이 사용, typescript는 자체적으로 es3(ie9)까지 자체적으로 지원이 된다. babel은 따로 필요하지 않지만 typescript와 babel을 같이 사용하는 경우도 있다. 
+* npm i awesome-typescript-loader -D : webpack과 typescript를 연결해주는 역할로는 유명한 두가지 ts-loader 와 awesome-typescript-loader가 있다. atl(awesome-typescritp-loader)은 ts-loader 보다 빠르며 bable을 지원한다. 후에 babel을 사용할 것을 염두해서 atl을 사용함
 * npm i @types/react @types/react-dom
     * ### 유형 다섯가지
         * 리덕스 -> 알아서 타입스크립트를 지원한다
@@ -21,6 +18,10 @@
     "dev": "webpack"
   },
 ```
+* npm i react-hot-loader : 저장할때마다 새로고침 해야하는 불편함을 덜어줌, root dts를 제공한다.
+```
+const Hot = hot(WordRelay); //HOC High Order Class 상위 컴포넌트로 감싸는 것
+```
 * 파일 만들고 설정하기
     * webpack.config.js 
     * tsconfig.json : 타입스크립트 설정해주는 파일
@@ -31,3 +32,7 @@
         import React from 'react';
         ```
 
+## DTS 제공의 여부 ( Dedicated Tech Service )
+* 오른쪽 click 을 하여 'Go to Type Definition' root.d.ts 면 types를 다운 받지 않아도 됨
+* react, reactDOM 은 DTS를 제공하지 않기 때문에 @types/react @types/react-dom 를 설치해 줌
+* react-hot-loader의 경우 export default가 아닌 export 만 사용 따라서 { hot } 객체로 불러옴
