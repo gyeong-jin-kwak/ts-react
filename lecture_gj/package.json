@@ -1,0 +1,23 @@
+{
+  "name": "lecture_gj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack"
+  },
+  "author": "gyeong-jin",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
