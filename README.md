@@ -32,7 +32,15 @@ const Hot = hot(WordRelay); //HOC High Order Class 상위 컴포넌트로 감싸
         import React from 'react';
         ```
 
-## DTS 제공의 여부 ( Dedicated Tech Service )
+### DTS 제공의 여부 ( Dedicated Tech Service )
 * 오른쪽 click 을 하여 'Go to Type Definition' root.d.ts 면 types를 다운 받지 않아도 됨
 * react, reactDOM 은 DTS를 제공하지 않기 때문에 @types/react @types/react-dom 를 설치해 줌
 * react-hot-loader의 경우 export default가 아닌 export 만 사용 따라서 { hot } 객체로 불러옴
+
+### 끝말잇기 useCallback 
+* word 와 value 가 바뀌면 함수가 다시 세팅되고 그렇지 않으면 이전 캐시를 사용한다.
+```
+useCallback(()=>{
+    ...
+}, [word, value])
+```
