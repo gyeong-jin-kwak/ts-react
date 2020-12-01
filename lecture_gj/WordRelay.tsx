@@ -30,7 +30,7 @@ const WordRelay = () => {
                 input.focus();
             }
         }
-    }, [value]);
+    }, [word, value]);
 
     return (
         <>
