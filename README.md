@@ -22,6 +22,17 @@
 ```
 const Hot = hot(WordRelay); //HOC High Order Class 상위 컴포넌트로 감싸는 것
 ```
+* npm i -D webpack-dev-server : npx webpack 명령어를 치지 않아도 됨
+```
+  "scripts": {
+    "dev": "webpack-dev-server --hot"
+  },
+
+  output: {
+    publicPath: '/dist',
+  }
+  npm run dev
+```
 * 파일 만들고 설정하기
     * webpack.config.js 
     * tsconfig.json : 타입스크립트 설정해주는 파일
